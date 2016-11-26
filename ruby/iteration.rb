@@ -29,15 +29,19 @@ p dog_information
 
 
 #iteration through the hash using .each
-dog_name.each do |name| puts "The dog's name is #{name}"
-end
+dog_name.each {|name| puts "The dog's name is #{name}"}
 
 p dog_name
 #priting before the .map call
 
+puts"-------------------------------"
+#line spacing
+
+
 #iteration through the hash using .map
-dog_name.map! do |x|
-	x.delete("o")
-end
+dog_name.map! {|x| x.delete("o")}
 #.map! deletes any instances of the letter 'o' if found from the name
 p dog_name
+
+dog_information.each do |name,age| puts "Dog information is the following: \nName #{name} #{age} year(s) old \n"
+end
