@@ -70,14 +70,14 @@ if user_input == "no"
 		if choice == 'name'
 		puts "Update name"
 		designer.delete('name')
+		#delete the key value pair to update with new information
 		new_name = gets.chomp
 		designer[:name] = new_name
-		#designer[:name] == new_name
-
 
 		elsif choice == 'address'
 		puts "Update Address"
 		designer.delete('address')
+		#delete the key value pair to update with new information
 		new_address = gets.chomp
 		designer[:address] = new_address
 
@@ -85,18 +85,21 @@ if user_input == "no"
 		elsif choice == 'kids'
 		puts "Update the amount of kids"
 		designer.delete('kids')
+		#delete the key value pair to update with new information
 		new_kids = gets.to_i
 		designer[:kids] == new_kids
 
 		elsif choice == 'travel'
 		puts "Are you able to travel"
 		designer.delete('travel')
+		#delete the key value pair to update with new information
 		new_travel = gets.chomp
 		designer[:travel] = new_travel
 
 		elsif choice == 'telephone'
 		puts "Update your telephone number"
 		designer.delete('p_number')
+		#delete the key value pair to update with new information
 		new_telephone = gets.chomp 
 		designer[:p_number] = new_telephone	
   
@@ -108,7 +111,7 @@ if user_input == "no"
  		puts "#{key}: #{value}"	
 end
 
- 
+
 puts ""
 puts "Thank you for your submission"
 
