@@ -45,3 +45,61 @@ p dog_name
 
 dog_information.each do |name,age| puts "Dog information is the following: \nName #{name} #{age} year(s) old \n"
 end
+
+puts "------------------------------------- "
+puts " "
+
+numbers = [0,1,2,3,4,5,6,7,8,9,10]
+
+
+numbers.delete_if {|num| num < 5}
+#A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5).
+
+numbers.keep_if {|num| num >5 }
+
+
+#A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5).
+
+
+rand_words = ["love", " patience", "pray"]
+rand_words.keep_if {|words| words != "love"}
+p rand_words
+
+# A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
+
+
+puts " "
+puts " For Hashes"
+alphabet =  {
+	"A" => "a",
+	"B" => "b",
+	"C" => "c"
+}
+
+p alphabet
+alphabet.delete("A")
+p alphabet
+
+
+#A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5).
+
+puts " "
+
+alphabet.has_key?("x")
+
+# A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5).
+
+
+puts " "
+
+alphabet.reject {|a,b| a >"C"
+}
+
+puts " "
+
+#A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
+
+alphabet.has_value?("A")
+
+#A method that will remove items from a data structure until the condition in the block evaluates to false, then stops
+#(you may not find a perfectly working option for the hash, and that's okay).
