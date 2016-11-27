@@ -78,5 +78,14 @@ end
 
 #reverse(["love", "pray"])
 
+def join(name)
+	string = name.join(",")
+	return string
+end
+
+#oin(["pray", "love"])
+
+
+
 
 
