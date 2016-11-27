@@ -41,12 +41,10 @@ C) Designing a method that will change the consonants letters in the alphabet
 
 =end 
 
-
-
-
-
 # User Interface
 
+
+=begin
 puts "Welcome to the Alias Management System"
 puts " "
 puts "You may enter as many fake names as you would like, type 'quit' to exit the program"
@@ -64,3 +62,11 @@ end
 
 puts names
 #prints the names that are now stored in the array
+=end
+
+def split(string)
+	new_string = string.split(" ")
+	return string
+end
+
+split("hello love")
