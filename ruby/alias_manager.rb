@@ -82,14 +82,31 @@ def join(name)
 	return string
 end
 
-#oin(["pray", "love"])
+#join(["pray", "love"])
 
 def vowels (string)
 	new_string = string.tr('aeiou','eioua')
 	return new_string
 end
 
+def constonants(string)
+char =	0
+alphabet = 'bcdfghjklmnpqrstvwxyz'
+	while char < string.length
+		if string[char] == ""
+			elsif
+			temp_string = alphabet.index(string[char])
+			#using another variable to hold a temporary string
+			#What is the result of alphabet.index("some letter in the string")
+			#for an example alphabet.index("b") => 0
 
+			temp_string = temp_string + 1
+			string[char] = alphabet[temp_string]
+		end
+		char = char + 1
+	end	
+	return string
+end
 
 
 
