@@ -12,3 +12,16 @@ Concession Stand -> Hamburgers, French Fries.  Pizza, Cotton Candy
 People -> Adults, Children, Teenager
 
 =end 
+
+
+#Creation of nested data structure, starting out with empty Hash 
+
+amusement_park = Hash.new
+amusement_park = {
+	'rides' => ['roller coaster', 'ferris wheel'],
+	'arcade'=> ['video games', 'bowling', 'prizes'],
+	'concession'=> ['Hamburgers', 'fries', 'pizza', 'cotton candy'],
+	'people' => ['adults','children', 'teenager']
+}
+
+p amusement_park
