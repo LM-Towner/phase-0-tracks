@@ -20,8 +20,23 @@ amusement_park = Hash.new
 amusement_park = {
 	'rides' => ['roller coaster', 'ferris wheel'],
 	'arcade'=> ['video games', 'bowling', 'prizes'],
-	'concession'=> ['Hamburgers', 'fries', 'pizza', 'cotton candy'],
+	'concession'=> ['hamburgers', 'fries', 'pizza', 'cotton candy'],
 	'people' => ['adults','children', 'teenager']
 }
 
+#p amusement_park
+#printing the amusement park hash to make sure it was created sucessfully
+
+p amusement_park['arcade'][2]
+# => should print out prizes, because prizes is the 3rd element inside of the array
+
+p amusement_park['rides'][1]=> ['Tommy', 'Allison', 'Jane']
+#adding people onto the ferris wheel 
 p amusement_park
+
+p amusement_park['concession'][0] => ['with cheese', 'with mustard', 'no tomatoes']
+#creating different types of hamburgers 
+
+p amusement_park['people'].last
+# printing the last elemennt in the people array
+
