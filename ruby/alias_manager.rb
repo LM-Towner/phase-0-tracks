@@ -43,7 +43,6 @@ C) Designing a method that will change the consonants letters in the alphabet
 
 # User Interface
 
-
 =begin
 puts "Welcome to the Alias Management System"
 puts " "
@@ -84,6 +83,11 @@ def join(name)
 end
 
 #oin(["pray", "love"])
+
+def vowels (string)
+	new_string = string.tr('aeiou','eioua')
+	return new_string
+end
 
 
 
