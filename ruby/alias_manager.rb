@@ -69,4 +69,14 @@ def split(string)
 	return string
 end
 
-split("hello love")
+#p split("hello love")
+
+def reverse(array)
+	array = array.reverse!
+	return array
+end
+
+#reverse(["love", "pray"])
+
+
+
