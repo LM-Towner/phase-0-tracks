@@ -106,7 +106,7 @@ input = ""
       	change_name = gets.chomp
       	change_name = change_name.downcase
         real_name = change_name
-    if change_name == "done"
+    if change_name == "quit"
       break
     elsif
         change_name = vowels(change_name)
