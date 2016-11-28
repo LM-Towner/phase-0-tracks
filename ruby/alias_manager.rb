@@ -94,7 +94,31 @@ def constonants(string)
 	return string
 end
 
+#end of the methods declaring
 
+stored_names = {}
+real_name = ""
+alias_name = ""
 
+input = ""
+  until input.downcase == "quit"
+    print "Enter a  first and last name. Enter 'quit'" 
+      	change_name = gets.chomp
+      	change_name = change_name.downcase
+        real_name = change_name
+    if change_name == "done"
+      break
+    elsif
+        change_name = vowels(change_name)
+		change_name = constonants(change_name)
+		change_name = change_name.split
+		change_name = change_name.reverse
+		alias_name = change_name
+      end
+    stored_names[real_name] = alias_name
+  end
 
-
+puts "A complete list of all the names we changed: "
+stored_names.each do |key,value|
+  puts "#{key} : #{value}"
+end
