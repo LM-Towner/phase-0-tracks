@@ -94,3 +94,10 @@ end
 array = [1, 5,99,56,78,362,2 ]
 p sort(array)
 
+#Do the Thing 
+
+=begin 
+I realized that my understanding for things comes easier when I am I given a visual representations of the information. 
+My emotional state when dealing with algorithms depends on the amount of time I spend working on the problem. It can range
+from anger when dealing with the problem for too long, to excitement once I finally figure out the answer. 
+=end 
