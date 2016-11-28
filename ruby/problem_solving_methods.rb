@@ -57,3 +57,40 @@ index = 2
 end
 
 fib(100)
+
+#Release 2: Sort an Array
+
+# pseudocode for insertion sort algorithm 
+
+# 1. look at first index 
+# 2. that one index will be the first sorted index 
+# 3. the next index in the unsorted array will be compared with #    indexes of the sorted array. 
+# 4. the condition IF the unsorted element is greater than the sorted element it will be put after the sorted element. 
+# 5. OTHERWISE the unsorted element will be placed before the sorted element
+# 6. continue until all elements are sorted.
+
+
+
+def sort(array)
+    final = [array[0]]
+    array.delete_at(0)
+    # main code
+    for i in array
+        final_index = 0
+        while final_index < final.length
+            if i <= final[final_index]
+                final.insert(final_index,i)
+                break
+            elsif final_index == final.length-1
+                final.insert(final_index+1,i)
+                break
+            end
+            final_index+=1
+        end
+    end
+    # output
+    final
+end
+array = [1, 5,99,56,78,362,2 ]
+p sort(array)
+
