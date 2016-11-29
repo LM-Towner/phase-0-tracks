@@ -5,8 +5,9 @@ class Puppy
     toy
   end
 
-  def initialize
-  puts "intializing a new puppy class" 
+  def initialize ()
+  puts "intializing a new puppy class"
+  
   end
 
   def speak(integer)
@@ -23,6 +24,10 @@ class Puppy
   	p age
   end
 
+ def sit(seconds)
+ puts "Puppy will sit for #{seconds} seconds"
+ end
+
 end # end of the Puppy class
 
 #driver code 
@@ -31,4 +36,4 @@ Nutmeg = Puppy.new
 Nutmeg.speak(7)
 Nutmeg.rollover
 Nutmeg.dog_years(5)
-
+Nutmeg.sit(30)
