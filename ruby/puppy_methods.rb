@@ -36,12 +36,15 @@ class Rapper
 	"intializing the Rapper class"
 	end
 
+	def concert
+	puts "Performs at a concert"
+	end
+
+	def studio()
+	puts "Spending time in the studio"
+	end
 	
 end # end of the Rapper class
-
-
-
-
 
 
 #>>>>>>>>>>>>>>>>>DRIVER CODE <<<<<<<<<<<<<<<<<<<<<<<
@@ -66,3 +69,8 @@ puts "#{count}. Adding a new instance of a rapper"
 rapper_array << Rapper.new
 count = count + 1
 end
+
+rapper_array.each {|rapper|rapper.concert}
+rapper_array.each{|rapper|rapper.studio}
+
+
