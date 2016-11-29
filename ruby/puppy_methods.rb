@@ -8,10 +8,15 @@ class Puppy
   def initialize
   puts "intializing a new puppy class" 
   end
-end
+
+  def speak(integer)
+  	integer.times {puts "woof"}
+  end
+end # end of the Puppy class
 
 #driver code 
 
 Nutmeg = Puppy.new
+Nutmeg.speak(7)
 
 
