@@ -30,10 +30,39 @@ class Puppy
 
 end # end of the Puppy class
 
-#driver code 
+class Rapper
 
+	def initialize
+	"intializing the Rapper class"
+	end
+
+	
+end # end of the Rapper class
+
+
+
+
+
+
+#>>>>>>>>>>>>>>>>>DRIVER CODE <<<<<<<<<<<<<<<<<<<<<<<
+
+#-----------Puppy Driver Code-----------#
 Nutmeg = Puppy.new
 Nutmeg.speak(7)
 Nutmeg.rollover
 Nutmeg.dog_years(5)
 Nutmeg.sit(30)
+
+
+#-----------Rapper Driver Code-----------#
+
+#Use a loop to make 50 instances of your class and store it in a data structure
+
+count = 1 
+rapper_array = []
+
+while count <= 50
+puts "#{count}. Adding a new instance of a rapper"
+rapper_array << Rapper.new
+count = count + 1
+end
