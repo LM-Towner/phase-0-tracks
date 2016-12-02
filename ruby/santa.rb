@@ -101,14 +101,10 @@ puts "We will be making #{answer} Santas: "
 #end
 
 
-
 #santas.each do |santa|
  #	puts "The gender of the santa is #{santa.gender}, 
  # and it's ethnicity is: #{santa.ethnicity}, they are #{@age} years old"
 #end
-
-
-
 
 
 # >>>>>>>>>>Driver Code<<<<<<<<<<<<<
