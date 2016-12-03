@@ -44,6 +44,9 @@ def shopping_list(items,list)
 	#splitting the string, strings automatically gets loaded into an array
 	items.each{|item|
 	list[item] = 1
+	# hash[key] = 1
+	# hash{key => 1}
+
 }
 	#populating each item in the array with the quantity of 1
 	list
@@ -51,6 +54,7 @@ end
 
 def add_to_list(list,item, quantity)
 	list[item] = quantity
+	# list{item => quantity}
 	list 
 end
 
