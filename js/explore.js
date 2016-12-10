@@ -19,3 +19,13 @@ function reverse(string){
 }
 
 console.log(reverse("hello"));
+
+var i = "hello";
+if (i === "olleh") {
+console.log(i);
+}
+i = reverse(i);
+if (i === "olleh") {
+console.log(i);
+}
+
