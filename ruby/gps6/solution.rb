@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: noone else, my pair didn't show up, however my guide was very helpful ].
+# We spent [1.5] hours on this challenge.
 
 # EXPLANATION OF require_relative
 #Require Relative is using a file within the same directory without using the file extension
