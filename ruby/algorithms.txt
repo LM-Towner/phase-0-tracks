@@ -1,0 +1,29 @@
+In order for the robot to determine which floor to go to, someone needs to send a message to the robot via text message
+
+Approach shiny metallic door frame which houses two metallic doors that will seperate in the middle to box shaped room 
+	if closed, press circular or retangular button on a panel to signal for the elevator doors to open
+if the shiny metallic doors are opened proceed into the elevator
+receive message to which number to press on the metallic panel within the elevator
+scan the panel to figure out which number to press
+press the button 
+wait for the door to close and move to the side, others may get on after you
+	if someone else gets on scan the outside of the elevator to make sure it is not the floor you desire to get off at
+	if this is not your floor stay on elevator
+when the doors open again, scan the outside door to see if this is where you belong
+	if you do belong on this floor get off 
+
+
+---------------------------
+
+Writing an algorithm for turning on laptop 
+
+Locate laptop 
+Find hinge to open laptop
+Pull upwards until keyboard is completely exposed and the top cover is now perpindicular to the keyboard
+Locate power button
+Most power buttons will be a rectangular button located somewhere above the laptop
+The icon on the button will have circle with a line going through the center
+Press button to turn on laptop
+The screen should come on
+IF not the computer's battery may be dead
+
