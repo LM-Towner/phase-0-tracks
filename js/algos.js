@@ -22,6 +22,18 @@ function kVMatch(obj1, obj2){
 	return false;
 }
 
+//Release 2: Generate Random Test Data
+function random_string() {
+	var ranString = "";
+	var length = Math.floor((Math.random() * 10) + 1);
+	var alphabet = "abcdefghijklmnopqrstuvwxyz"
+	for (var i = 0; i < length; i++){
+		ranString += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+	}
+	return ranString
+}
+
+
 /*______________________________________________________
 	driver code to test function longestString here
 ________________________________________________________*/
@@ -44,6 +56,8 @@ console.log(kVMatch(obj1, obj3));
 console.log(kVMatch(obj2, obj4)); 
 console.log(kVMatch(obj3, obj4));
 console.log(kVMatch(obj6, obj5));
+
+
 
 
 
