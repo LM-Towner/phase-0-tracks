@@ -33,6 +33,16 @@ function random_string() {
 	return ranString
 }
 
+
+function random_array(number) {
+	var ranArray = [];
+	for (var i = 0; i < number; i++) {
+		ranArray.push(random_string());
+	}
+	console.log("")
+	return ranArray
+}
+
 /*______________________________________________________
 	driver code to test function longestString here
 ________________________________________________________*/
@@ -62,6 +72,7 @@ console.log(kVMatch(obj6, obj5));
 ________________________________________________________*/
 
 console.log(random_string());
+
 
 
 
