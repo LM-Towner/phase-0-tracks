@@ -73,6 +73,16 @@ ________________________________________________________*/
 
 console.log(random_string());
 
+/*______________________________________________________
+	driver code to create random data 
+________________________________________________________*/
+
+for (var a = 0; a < 10; a++) {
+	console.log("Printing some random stuff!")
+	var someArray = random_array(a + 1)
+	console.log(someArray)
+	console.log(longestStringHere(someArray))
+}
 
 
 
