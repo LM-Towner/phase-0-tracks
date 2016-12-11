@@ -10,3 +10,11 @@ function longestStringHere(findString){
   console.log("This is the longest String:   ");
   return string;
 }
+
+
+//_______________________________________________________
+//driver code to test function longestString here
+
+console.log(longestStringHere(["this","may","be","it"]));
+console.log(longestStringHere(["abc","defgh","be","i"]));
+console.log(longestStringHere(["well","seeee","aboouuuuttt","it"]));
