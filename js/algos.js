@@ -33,7 +33,6 @@ function random_string() {
 	return ranString
 }
 
-
 /*______________________________________________________
 	driver code to test function longestString here
 ________________________________________________________*/
@@ -56,6 +55,16 @@ console.log(kVMatch(obj1, obj3));
 console.log(kVMatch(obj2, obj4)); 
 console.log(kVMatch(obj3, obj4));
 console.log(kVMatch(obj6, obj5));
+
+
+/*______________________________________________________
+	driver code to test function for  random string 
+________________________________________________________*/
+
+console.log(random_string());
+
+
+
 
 
 
