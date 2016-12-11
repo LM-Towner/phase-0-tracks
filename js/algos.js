@@ -11,6 +11,19 @@ function longestStringHere(findString){
   return string;
 }
 
+// Release 1 : Find a key-value match pair
+
+function kVMAtch(obj1, obj2){
+	for (var key in obj1){
+		if(obj1[key] == obj2[key]){
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
 
 //_______________________________________________________
 //driver code to test function longestString here
