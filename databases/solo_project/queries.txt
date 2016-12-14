@@ -17,6 +17,29 @@ FOREIGN KEY(emp_id) REFERENCES Employee(EMP_ID)
 );
 
 
+C-- Populating the Employees Table with Data
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote) VALUES ("Kathy","MacFarland",24,"True");
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote) VALUES ("Joseph","Baptiste",30,"False");
+
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote) VALUES ("Ashford","Lions",20,"True");
+
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote) VALUES ("Joaquin","Morales",40,"True");
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote) VALUES ("Beatriz","Jones",41,"True");
+
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote) VALUES ("Donna","White",25,"False");
+
+
+
+
+
+
+
 
 
 
