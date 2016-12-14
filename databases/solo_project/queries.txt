@@ -13,6 +13,7 @@ B-- Creating a Region Table for Employee's Location
 CREATE TABLE Region(
 EMP_ID INTEGER PRIMARY KEY
 State CHAR(2)
+Emp_ID INT
 FOREIGN KEY(emp_id) REFERENCES Employee(EMP_ID)
 );
 
@@ -34,6 +35,14 @@ INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote) VALUES ("Beatriz"
 
 INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote) VALUES ("Donna","White",25,"False");
 
+D--Populating the Region Table with Data
+
+INSERT INTO Region (EMP_ID,State) VALUES (1, "NY"); 
+INSERT INTO Region (EMP_ID,State) VALUES (2, "CA"); 
+INSERT INTO Region (EMP_ID,State) VALUES (3, "NY"); 
+INSERT INTO Region (EMP_ID,State) VALUES (4, "NY"); 
+INSERT INTO Region (EMP_ID,State) VALUES (5, "CA"); 
+INSERT INTO Region (EMP_ID,State) VALUES (6, "CA"); 
 
 
 
