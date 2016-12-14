@@ -1,3 +1,5 @@
+Release 1: Build Your Database
+
 A--Creating an Employees Table
 
 CREATE TABLE Employees(
@@ -11,10 +13,10 @@ Remote BOOLEAN
 B-- Creating a Region Table for Employee's Location
 
 CREATE TABLE Region(
-EMP_ID INTEGER PRIMARY KEY
-State CHAR(2)
-Emp_ID INT
-FOREIGN KEY(emp_id) REFERENCES Employee(EMP_ID)
+ID INTEGER PRIMARY KEY,
+Emp_ID INTEGER,
+State CHAR(2),
+FOREIGN KEY (EMP_ID) REFERENCES Employees(EMP_ID)
 );
 
 
@@ -45,6 +47,65 @@ INSERT INTO Region (EMP_ID,State) VALUES (5, "CA");
 INSERT INTO Region (EMP_ID,State) VALUES (6, "CA"); 
 
 
+----
+
+Release 2: Execute SQL Queries
+
+1)Selecting all data from the Employees table
+
+Select * FROM employees;	
+Output ---
+
+1           Kathy       MacFarland  24           True
+2           Joseph      Baptiste    30           False
+3           Ashford     Lions       20           True
+4           Joaquin     Morales     40           True
+5           Beatriz     Jones       41           True
+6           Donna       White       25           False
+
+2)Updating Donna's Hourly rate
+
+UPDATE Employees SET Hourly_Rate = 28 WHERE First_Name = "Donna"; 
+
+Select * FROM employees;
+
+1           Kathy       MacFarland  24           True
+2           Joseph      Baptiste    30           False
+3           Ashford     Lions       20           True
+4           Joaquin     Morales     40           True
+5           Beatriz     Jones       41           True
+6           Donna       White       28           False
+
+3)Displaying the information in both tables using one query
+
+SELECT * FROM Employees, Region WHERE employees.emp_id = region.id;
+
+1           Kathy       MacFarland  24           True        1           NY
+2           Joseph      Baptiste    30           False       2           CA
+3           Ashford     Lions       20           True        3           NY
+4           Joaquin     Morales     40           True        4           NY
+5           Beatriz     Jones       41           True        5           CA
+6           Donna       White       28           False       6           CA
+
+4)Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+Select First_Name,Last_Name FROM Employees inner JOIN REGION on Employees.EMP_ID = Region.id
+
+Kathy       MacFarland
+Joseph      Baptiste
+Ashford     Lions
+Joaquin     Morales
+Beatriz     Jones
+Donna       White
+
+5) Delete an item that meets some condition
+DELETE FROM Employees where First_Name = "Ashford";
+
+1           Kathy       MacFarland  24           True
+2           Joseph      Baptiste    30           False
+4           Joaquin     Morales     40           True
+5           Beatriz     Jones       41           True
+6           Donna       White       28           False
 
 
 
