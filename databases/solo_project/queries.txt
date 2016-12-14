@@ -1,0 +1,23 @@
+A--Creating an Employees Table
+
+CREATE TABLE Employees(
+EMP_ID INTEGER PRIMARY KEY,
+First_Name VARCHAR(255),
+Last_Name VARCHAR(255),
+Hourly_Rate INT(2),
+Remote BOOLEAN
+);
+
+B-- Creating a Region Table for Employee's Location
+
+CREATE TABLE Region(
+EMP_ID INTEGER PRIMARY KEY
+State CHAR(2)
+FOREIGN KEY(emp_id) REFERENCES Employee(EMP_ID)
+);
+
+
+
+
+
+
