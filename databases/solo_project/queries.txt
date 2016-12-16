@@ -130,7 +130,31 @@ SELECT * FROM Employees;
 	7           Otis        Branch      19           False          2
 	8           Norma       Reedus      19           False          3
 
+--Release 3 : Research on your own
 
+1) There are many different types f Joins, but the major types of Joins are 
+ 	-The cross Join
+ 	SELECT first_name, Last_Name, Hourly_Rate FROM employees Cross Join region on employees.state_id = region.id;
+
+ 			--Output--
+ 		Kathy|MacFarland|24
+		Joaquin|Morales|40
+		Beatriz|Jones|41
+		Donna|White|28
+		Jonathan|McDuff|19
+		Otis|Branch|19
+		Norma|Reedus|19
+
+ 	-The inner Join
+ 	-The outer Join
+
+
+SELECT employees.first_name, region.state FROM employees Right JOIN region ON employees.state_id = region.id;
+
+I tried to run the above command in the database however I received the following output
+
+	--Output--
+	Error: RIGHT and FULL OUTER JOINs are not currently supported
 
 
 
