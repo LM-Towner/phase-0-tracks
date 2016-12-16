@@ -18,3 +18,53 @@ Remote_Status BOOLEAN,
 state_id int,
 FOREIGN KEY (state_id) References region(id)
 );
+
+C--Populating the Region Table with Data
+
+INSERT INTO Region (State) VALUES ("NY"); 
+INSERT INTO Region (State) VALUES ("CA");
+INSERT INTO Region (State) VALUES ("DC");
+
+	C1--Selecting all the fields from the Region Table
+	SELECT * FROM Region;
+
+	--Output--
+	1       NY
+	2       CA
+	3       DC
+
+D-- Populating the Employees Table with Data
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote_Status, state_id) VALUES ("Kathy","MacFarland",24,"True", 1);
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote_Status, state_id) VALUES ("Joseph","Baptiste",30,"False"1,);
+
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote_Status,state_id) VALUES ("Ashford","Lions",20,"True", 2);
+
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote_Status,state_id) VALUES ("Joaquin","Morales",40,"True",2);
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote_Status,state_id) VALUES ("Beatriz","Jones",41,"True", 3);
+
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote_Status,state_id) VALUES ("Donna","White",25,"False", 3);
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote_Status,state_id) VALUES ("Jonathan","McDuff",19,"False", 1);
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote_Status,state_id) VALUES ("Otis","Branch",19,"False", 2);
+
+INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote_Status,state_id) VALUES ("Norma","Reedus",19,"False",3);
+
+	D1--Selecting all the fields from the Region Table
+	SELECT * FROM Employees;
+
+				--Output--
+	1           Kathy       MacFarland  24           True           1
+	2           Ashford     Lions       20           True           2
+	3           Joaquin     Morales     40           True           2
+	4           Beatriz     Jones       41           True           3
+	5           Donna       White       25           False          3
+	6           Jonathan    McDuff      19           False          1
+	7           Otis        Branch      19           False          2
+	8           Norma       Reedus      19           False          3
