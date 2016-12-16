@@ -68,3 +68,28 @@ INSERT INTO Employees(First_Name,Last_Name,Hourly_Rate,Remote_Status,state_id) V
 	6           Jonathan    McDuff      19           False          1
 	7           Otis        Branch      19           False          2
 	8           Norma       Reedus      19           False          3
+
+Release 2: Execute SQL Queries
+
+1)Selecting all data from the Employees table
+
+Select * FROM employees;	
+	-- Output ---
+	See above^^^
+
+2)Updating Donna Hourly rate
+
+UPDATE Employees SET Hourly_Rate = 28 WHERE First_Name = "Donna"; 
+
+Select Hourly_Rate FROM Employees WHERE First_Name = "Donna";
+	--Output--
+	28
+
+
+
+
+
+
+
+
+
