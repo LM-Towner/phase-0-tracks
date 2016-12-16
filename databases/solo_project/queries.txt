@@ -1,0 +1,20 @@
+Release 1: Build Your Database
+
+A-- Creating a Region Table for Employee's Location
+
+CREATE TABLE Region(
+ID INTEGER PRIMARY KEY,
+State CHAR(2)
+);
+
+B--Creating an Employees Table
+
+CREATE TABLE Employees(
+ID INTEGER PRIMARY KEY,
+First_Name VARCHAR(255),
+Last_Name VARCHAR(255),
+Hourly_Rate INT(2),
+Remote_Status BOOLEAN,
+state_id int,
+FOREIGN KEY (state_id) References region(id)
+);
