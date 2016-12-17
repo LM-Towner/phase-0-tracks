@@ -1,0 +1,129 @@
+--Release O: Build Your Tables 
+
+CREATE TABLE Users(
+id INTEGER PRIMARY KEY,
+First_Name VARCHAR(255),
+Last_Name VARCHAR(255)
+);
+
+CREATE TABLE Businesses(
+id INTEGER PRIMARY Key,
+name VARCHAR(255)
+);
+
+
+
+	INSERT INTO Businesses (Name) VALUES ("Grundy Hollow Wedding Chapel");
+
+	INSERT INTO Businesses (Name) VALUES ("Amir's Towing");
+
+	INSERT INTO Businesses (Name) VALUES ("The Beagle Nightclub");
+
+	INSERT INTO Businesses (Name) VALUES ("Lotus Yoga");
+
+	INSERT INTO Businesses (Name) VALUES ("Plumbing by Janet");
+
+	INSERT INTO Businesses (Name) VALUES ("Sushi World");
+
+	INSERT INTO Businesses (Name) VALUES ("JoeBob's Sportz Barn");
+
+	INSERT INTO Users (First_Name, Last_Name) VALUES ("Bradford", "Pitt");
+
+	INSERT INTO Users (First_Name, Last_Name) VALUES ("Mandy", "Kaling");
+
+	INSERT INTO Users (First_Name, Last_Name) VALUES ("Angela", "Jolie");
+
+	INSERT INTO Users (First_Name, Last_Name) VALUES ("Steven", "Wonder");
+
+	INSERT INTO Users (First_Name, Last_Name) VALUES ("Holly", "Berry");
+
+	INSERT INTO Users (First_Name, Last_Name) VALUES ("Meryl", "Streepman");
+
+	INSERT INTO Users (First_Name, Last_Name) VALUES ("Denzel", "George");
+
+
+	--Output for Businesses--
+	1           Grundy Hollow Wedding Chapel
+	2           Amirs Towing
+	3           The Beagle Nightclub
+	4           Lotus Yoga
+	5           Plumbing by Janet
+	6           Sushi World
+	7           JoeBobs Sportz Barn
+
+	--Output for Users--
+	1           Bradford    Pitt
+	2           Mandy       Kaling
+	3           Angela      Jolie
+	4           Steven      Wonder
+	5           Holly       Berry
+	6           Meryl       Streepman
+	7           Denzel      George
+
+
+
+--Release 1: Connect the Tables 
+
+CREATE TABLE Reviews(
+id INTEGER PRIMARY Key,
+Stars INT,
+Comment VARCHAR (255),
+Business_id INT,
+User_id INT,
+Foreign Key (User_id) REFERENCES Users(id),
+Foreign Key (Business_id) REFERENCES Businesses(id)
+);
+
+
+INSERT INTO Reviews (Stars, Comment, Business_id, User_id) VALUES (5,"The fish was so fresh it was practically moving on my plate!!!", 6, 4);
+INSERT INTO Reviews (Stars, Comment, Business_id, User_id) VALUES (1,"I WAITED ALMOST 5 HOURS FOR THIS #@%$$ Truck to show up in the pouring rain", 2, 5);
+INSERT INTO Reviews (Stars, Comment, Business_id, User_id) VALUES (3,"This was my 5th Wedding and Grundy was cheap and fullfilling, we got in and got out! I'm So glad she didn't make me sign the prenup. I'm going to be rich!!!!", 1, 7);
+INSERT INTO Reviews (Stars, Comment, Business_id, User_id) VALUES (2,"You would think that some woman would come by to handle the plumbing, except it was so fat dude with a lot of crack, ugh!", 5, 1);
+INSERT INTO Reviews (Stars, Comment, Business_id, User_id) VALUES (4,"After a long night of heavy drinking, this is the place to go to get rid of all the toxins", 4, 3);
+INSERT INTO Reviews (Stars, Comment, Business_id, User_id) VALUES (5,"Cheap vodka, tequila shots, drunk as a skunk!", 3, 3);
+
+--Release 2: View a Many-to-Many Relationship 
+
+SELECT * FROM reviews JOIN businesses, users 
+ON reviews.user_id = users.id AND reviews.business_id = businesses.id;
+
+	--Output--
+1|5|The fish was so fresh it was practically moving on my plate!!!|6|4|6|Sushi World|4|Steven|Wonder
+
+2|1|I WAITED ALMOST 5 HOURS FOR THIS #@%$$ Truck to show up in the pouring rain|2|5|2|Amir's Towing|
+5|Holly|Berry
+3|3|This was my 5th Wedding and Grundy was cheap and fullfilling, we got in and got out! I'm So glad
+ she didn't make me sign the prenup. I'm going to be rich!!!!|1|7|1|Grundy Hollow Wedding Chapel|7|D
+enzel|George
+4|2|You would think that some woman would come by to handle the plumbing, except it was so fat dude
+with a lot of crack, ugh!|5|1|5|Plumbing by Janet|1|Bradford|Pitt
+5|4|After a long night of heavy drinking, this is the place to go to get rid of all the toxins|4|3|4
+|Lotus Yoga|3|Angela|Jolie
+6|5|Cheap vodka, tequila shots, drunk as a skunk!|3|3|3|The Beagle Nightclub|3|Angela|Jolie	
+
+SELECT businesses.name, users.first_name, users.last_name, reviews.stars, 
+reviews.comment FROM reviews JOIN businesses, users 
+ON reviews.business_id = businesses.id AND reviews.user_id = users.id;
+
+	--Output--
+Sushi World|Steven|Wonder|5|The fish was so fresh it was practically moving on my plate!!!
+Amir's Towing|Holly|Berry|1|I WAITED ALMOST 5 HOURS FOR THIS #@%$$ Truck to show up in the pouring
+ain
+Grundy Hollow Wedding Chapel|Denzel|George|3|This was my 5th Wedding and Grundy was cheap and fullf
+lling, we got in and got out! I'm So glad she didn't make me sign the prenup. I'm going to be rich!
+!!
+Plumbing by Janet|Bradford|Pitt|2|You would think that some woman would come by to handle the plumb
+ng, except it was so fat dude with a lot of crack, ugh!
+Lotus Yoga|Angela|Jolie|4|After a long night of heavy drinking, this is the place to go to get rid
+of all the toxins
+The Beagle Nightclub|Angela|Jolie|5|Cheap vodka, tequila shots, drunk as a skunk!
+
+SELECT businesses.name, users.first_name, users.last_name, reviews.stars, reviews.comment FROM businesses 
+JOIN users, reviews ON reviews.user_id = users.id AND reviews.business_id = businesses.id 
+WHERE businesses.id = 1;
+
+
+	--Output--
+Grundy Hollow Wedding Chapel|Denzel|George|3|This was my 5th Wedding and Grundy was cheap and fullfi
+lling, we got in and got out! I'm So glad she didn't make me sign the prenup. I'm going to be rich!!!!
+
