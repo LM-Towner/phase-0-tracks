@@ -47,6 +47,18 @@ get '/students/:id' do
   student.to_s
 end
 
+get '/search/:query_type/:query' do
+      query_type = params[:query_type]
+      query = params[:query]
+       students = db.execute("SELECT * FROM students WHERE #{query_type}=?", query)
+       response = ''
+      students.each do |student|
+                response << ("Name: " + student["name"] + 'Age:  ' + student["age"].to_s + "<br>")
+                response << ("DBC Campus" + student["campus"] + ".<br><br>")
+       end
+       response
+end
+
 get '/contact' do
 	"2394 Mulberry Drive #3, Queens, NY"
 end
@@ -62,3 +74,4 @@ end
 get '/:number1/plus/:number2' do
       (params[:number1].to_i + params[:number2] .to_i).to_s
 end
+
