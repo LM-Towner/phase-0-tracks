@@ -50,3 +50,11 @@ end
 get '/contact' do
 	"2394 Mulberry Drive #3, Queens, NY"
 end
+
+get '/great_job' do
+	if params.empty? 
+          "Good Job!"
+      else
+          "Good Job, " + params["name"] + "!"
+    end
+end
