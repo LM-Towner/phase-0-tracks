@@ -1,21 +1,3 @@
-# This is an <h1> tag
-## This is an <h2> tag
-###### This is an <h6> tag
-
-*This text will be italic*
-_This will also be italic_
-
-**This text will be bold**
-__This will also be bold__
-
-
-1. Item 1
-2. Item 2
-3. Item 3
-   * Item 3a
-   * Item 3b
-
-
 #Release 0:View HTTP Requests
 
 # What are some common HTTP status codes?
@@ -56,7 +38,8 @@ __This will also be bold__
 
 ## What is a cookie (the technical kind, not the delicious kind)? How does it relate to HTTP requests?
 
-	* Cookies are bits of information that is saved when you vist a website. Some information that may be saved are username and passwords for partiicular websites, or certain browsing  patterns. Cookies also allow for you be tracked and marketed for certain advertisements based on things that are researched on your computer.
+	* Cookies are bits of information that is saved when you vist a website. Some information that may be saved are username and passwords for particular websites, or certain browsing  patterns. 
+	*Cookies also allow for you be tracked and marketed for certain advertisements based on things that are researched on your computer.
 
 
 
