@@ -37,52 +37,9 @@ C) Designing a method that will change the consonants letters in the alphabet
 	We will need a counter to check the length of the string to make sure that all characters
 	within the string is counted so that they can be changed
 
+
 ---------------------End of the PsuedoCoding---------------------
-
-=end 
-
-# User Interface
-
-=begin
-puts "Welcome to the Alias Management System"
-puts " "
-puts "You may enter as many fake names as you would like, type 'quit' to exit the program"
-puts "Enter name: "
-names = []
-#empty array to store the names that the user gives to the program
-
-while user_input != 'quit'
-#until the user enters the word 'quit', the program will keep prompting for a name
-names << user_input
-#adds the names to the names array
-puts "Enter name "
-user_input = gets.chomp
-end
-
-puts names
-#prints the names that are now stored in the array
 =end
-
-def split(string)
-	new_string = string.split(" ")
-	return string
-end
-
-#p split("hello love")
-
-def reverse(array)
-	array = array.reverse!
-	return array
-end
-
-#reverse(["love", "pray"])
-
-def join(name)
-	string = name.join(",")
-	return string
-end
-
-#join(["pray", "love"])
 
 def vowels (string)
 	new_string = string.tr('aeiou','eioua')
@@ -100,9 +57,10 @@ stored_names = {}
 real_name = ""
 alias_name = ""
 
+print "Welcome to the Alias Management System\n"
 input = ""
   until input.downcase == "quit"
-    print "Enter a  first and last name. Enter 'quit'" 
+    print "Enter a  first and last name, OR Type 'quit'\n" 
       	change_name = gets.chomp
       	change_name = change_name.downcase
         real_name = change_name
