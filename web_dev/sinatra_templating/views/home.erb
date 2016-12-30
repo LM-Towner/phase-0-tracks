@@ -1,16 +1,30 @@
+<!-- erb stands for embedded ruby, allows us to write html templates to use a ruby syntax -->
+
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Student Management System</title>
-  <link rel="stylesheet" href="styles.css">
+	<title>Student Management System</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Student Management System</h1>
-  <p>Welcome to the student management system.</p>
-  <p>Click <a href="students/new">here</a> to create a new student.</p>
-  <ul>
-    <% @students.each do |student| %>
-      <li><%= student['name'] %>, <%= student['age'] %></li>
-    <% end %>
-  </ul>
+	<h1 id= "title">Student Management System</h1>
+		<p> Welcome to the Student Management System</p>
+		<p><a href="/students/new">Create a new Student </a></p>
+		<p><a href="/students/delete">Delete a student record</a></p>
+
+			<ul class="list">
+				<% @students.each do |student| %>
+					<li>
+						<%= student['name']%>,
+						<%= student['campus']%>,
+					 	<%= student['age']%>		 	
+					 </li>
+				<% end %>
+				
+			</ul>
 </body>
 </html>
+
+		<!-- using the  symbol <%=%> [equal signs means to print the expression to the screen] (ice cream cone, allows for the information to be printed within the tags) equivalent to interpolation for strings #{}-->
+		<!--<p><%=@students%></p> -->
+		
